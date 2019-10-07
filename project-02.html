@@ -1,0 +1,65 @@
+<!-- This document was coded by sgedye in completion of the second project in FreeCodeCamp's 300hr Responsive Web Design course -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <style>
+    body { font-size: 22px;}
+    h1 { text-align: center; font-size: 2em; }
+    p { text-align: center; }
+    #form-container { width: 50vw; margin: auto; }
+    #survey-form { background-color: green; padding-left: 20px; padding-right: 20px; }
+    .form-options { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; }
+    fieldset { width: 95% !important; padding: 10px; margin-bottom: 10px; }
+    #survey-form > * { width: 100%; line-height: 40px; margin-bottom: 10px; }
+    button { margin-top: 20px; margin-bottom: 40px !important; }
+  </style>
+</head>
+<body>
+  <h1 id="title">Shaun's Survey</h1>
+  <p id="description">This is a short survey made by Shaun</p>
+  <div id="form-container">
+    <form id="survey-form" action="">
+      <label for="title">Title</label>
+      <div class="form-options">
+        <label><input type="radio" name="title" value="mr" />Mr</label>
+        <label><input type="radio" name="title" value="mrs" />Mrs</label>
+        <label><input type="radio" name="title" value="miss" />Miss</label>
+        <label><input type="radio" name="title" value="ms" />Ms</label>
+        <label><input type="radio" name="title" value="other" />Other</label>
+      </div>
+      <label id="name-label" for="name">First Name</label>
+      <input type="text" id="name" placeholder="Please enter your name..." required />
+      <label id="email-label" for="email">Email</label>
+      <input type="email" id="email" placeholder="Please enter your email..." required />
+      <label id="number-label" for="number">Age</label>
+      <input type="number" id="number" placeholder="Please enter your age..." min="0" max="100" required />
+      <label for="dropdown">Citizenship</label>
+      <select id="dropdown" name="citizenship">
+        <option value="">Select Value</option>
+        <option value="australian">Australian</option>
+        <option value="chinese">Chinese</option>
+        <option value="french">French</option>
+        <option value="japanese">Japanese</option>
+        <option value="spanish">Spanish</option>
+        <option value="other">Other</option>
+      </select>
+      <label for="hobbies">Hobbies</label>
+      <fieldset class="form-options">
+        <legend>Select everything you consider a hobby:</legend>
+        <label><input type="checkbox" name="hobbies" value="Fencing"/>Fencing</label>
+        <label><input type="checkbox" name="hobbies" value="Bowling" />Bowling</label>
+        <label><input type="checkbox" name="hobbies" value="Reading"/>Reading</label>
+        <label><input type="checkbox" name="hobbies" value="Dancing"/>Dancing</label>
+        <label><input type="checkbox" name="hobbies" value="Climbing"/>Climbing</label>
+        <label><input type="checkbox" name="hobbies" value="Swimming"/>Swimming</label>
+        <label><input type="checkbox" name="hobbies" value="Shooting"/>Shooting</label>
+      </fieldset>
+      <label for="addInfo">Additional Information</label>
+      <textarea id="addInfo" placeholder="Please write any additional information you think might be useful."></textarea>
+      <button type="submit" id="submit" name="submit" />Submit</button>     
+    </form>
+  </div>
+</body>
+</html>
