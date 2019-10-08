@@ -1,0 +1,86 @@
+<!-- This document was coded by sgedye in completion of the third project in FreeCodeCamp's 300hr Responsive Web Design course -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <style>
+      #main { margin: 0px; background-color: skyblue; font-size: 18px; text-align: center; }
+      /* Header */
+      #nav-bar { background-color: white !important; line-height: 100px; width:100%; padding: 10px 0px 10px 0px; position: fixed; top: -10px; z-index: 99; }
+      #header-img { height: 100px; width: auto; float: left; }
+      .nav-link { padding: 0px 40px 0px 0px; font-size: 28px; text-decoration: none; float: right; background-color: white;}
+      @media only screen and (max-width: 650px) {
+        .nav-link { visibility: hidden !important; height: 0px !important; }
+      }
+      /* Content */
+      #content { }
+      #title { position: absolute; padding-top: 100px; padding-left: 25%; font-size: 50px; z-index: 20; color: white; }
+      #boxer { width: 100% }
+      @media only screen and (max-width: 650px) {
+        #title { font-size: 25px !important; }
+        #boxer { padding-top: 100px !important; }
+      }
+      #video { margin: 0px 0px 100px 0px; }
+      #form { background-color: pink; width: 100%; line-height: 50px; }
+      #email { width: 250px; }
+      #options { display: flex; flex-direction: row; justify-content: space-around; align-items: center; margin: 20px 5% 120px 5%; }
+      .choice { border: solid; margin: 0px 10px 0px 10px; padding: 0px 20px 20px 20px; border-width: 2px;}
+      .choice > img { width: 100%; border: solid; border-width: 1px; }
+      @media only screen and (max-width: 650px) {
+        #options { flex-direction: column !important; }
+        .choice { margin: 10px !important; }
+      }
+      .price { font-size: 1.5em; }
+      button { margin-top: 10px; padding: 8px 25px 8px 25px; border-radius: 15%; background-color: darkblue; color: white; font-size: 1.2em;}
+      #footer { background-color: #333; font-size: 2em; color:white; padding: 60px 0px 60px 0px; }
+    </style>
+  </head>
+  <body id="main">
+    <header id="header">
+      <nav id="nav-bar">
+        <img id="header-img" src="https://rtgphotography.com.au/img/codepen/shaun-boxing.jpg" alt="Shaun's Gloves Logo" />
+        <a class="nav-link" href="#buy">Shop</a>
+        <a class="nav-link" href="#media">Media</a>
+        <a class="nav-link" href="#main">Home</a>
+      </nav>
+    </header>
+    <div id="content">
+      <h1 id="title">Shaun's Boxing Gloves</h1>
+      <img id="boxer" src="https://rtgphotography.com.au/img/codepen/boxer.jpg" alt="Image of a Boxer" />
+      <div id="media" style="height: 100px;"></div>
+      <h2>How to Select the Right Glove:</h2>
+      <iframe id="video" width="400" height="300" src="https://www.youtube.com/embed/hL4I2YUrhdo">
+      </iframe>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <label id="email-label" for="email">Email: </label>
+        <input id="email" name="email" type="email" placeholder="Please enter your email to join our mailing list."/>
+        <input type="submit" id="submit">
+      </form>
+      <div id="buy" style="height: 100px;"></div>
+      <h2>Own Your Own Pair of Shaun's Gloves Now:</h2>
+      <div id=options>
+        <div class=choice>
+          <h3>Mens' Gloves</h3>
+          <img src="https://rtgphotography.com.au/img/codepen/gloves-mens.jpg" alt="mens-gloves" />
+          <button href="">Buy</button>
+          <p class="price">Only $79.99</p>
+        </div>
+        <div class=choice>
+          <h3>Womens' Gloves</h3>
+          <img src="https://rtgphotography.com.au/img/codepen/gloves-womens.jpg" alt="womens-gloves" />
+          <button href="">Buy</button>
+          <p class="price">Only $59.99</p>
+        </div>
+        <div class=choice>
+          <h3>Vintage Gloves</h3>
+          <img src="https://rtgphotography.com.au/img/codepen/gloves-vintage.jpg" alt="vintage-gloves" />
+          <button href="">Buy</button>
+          <p class="price">From $99.99</p>
+        </div>
+      </div>
+      <footer id="footer">
+        <div>Shaun's Gloves © 2019</div>
+      </footer>
+  </body>
+</html>
