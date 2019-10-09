@@ -1,0 +1,359 @@
+<!-- This document was coded by sgedye in completion of the fourth project in FreeCodeCamp's 300hr Responsive Web Design course -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <style>  
+      body { background-image: url("https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/paper-bg.jpg"); margin: 0px; padding: 0px; font-size: 22px; }
+      #navbar { background-color: #f0f0f0; position: fixed; top: 0px; padding: 0px; width: 20%; height: 100vh; border-right: solid; border-right-color: #444; border-right-width: 3px; }
+      #nav-header { background-color: #ccc; text-align: center; font-size: 25px; font-weight: 800; line-height: 50px; border-bottom:solid; border-bottom-width: 1px; border-bottom-color: #333; }
+      ul.nav-list { list-style-type: none; padding: 0px;  margin: 0px; width: 100%; }
+      ul.nav-list > li { padding: 0px; width: 100%; border-bottom: solid; border-width: 1px; }
+      li.nav-last { position: absolute; bottom: 10px; border-top: solid; border-width: 1px; }
+      a.nav-link { width: 100%; display: block; text-decoration: none; text-align: center; font-size: 22px; color: #444; line-height: 40px; }
+      a.nav-link:hover { color: #e3e; }
+      @media screen and (max-width: 480px) {
+        #navbar { width: 100vw !important; height: 20vh !important; overflow: auto; }
+        li.nav-last { position: static !important; }
+        #main-doc { margin: 20vh 0px 0px 0px !important; padding: 4% 4% 0% 4% !important; }
+        #footer { margin: 0px 0px 0px 0px !important; width: 100% !important; height: 100px !important; border-top: solid; border-width: 1px; }
+        #footer > img { width: 100% !important; height: 100px !important; }
+      }
+      #main-doc { margin-left: 20%; padding: 0px 3% 0px 4%; }
+      section { padding-bottom: 50px; }
+      h1 { font-size: 48px; text-align: center; padding-bottom: 20px; }
+      section > header { font-size: 30px; font-weight: 600; padding-bottom: 10px; }
+      h3 { padding-bottom: 10px; }
+      p { padding-bottom: 10px; }
+      p.sights { font-size: 1.1em; }
+      ul { list-style-type: none }
+      /* CSS for the Toggler Div */
+      div.toggler { cursor:pointer; padding: 5px 10px 10px 20px; }
+      div.toggler div { display:none; margin-top: 5px; background:white; position: relative; width: auto; height: auto; }
+      div.toggler:hover { background: lightblue; }
+      #element { display: inline-block; margin: 0px; padding: 0px; width: 30%; height: 330px; }
+      #element:last-child { float: right; }
+      @media screen and (max-width: 480px) {
+        ul { padding-left: 0px; }
+        div.toggler {	cursor: pointer;	padding: 0px 0px 10px 0px; }
+        div.toggler div { display: none; margin-top: 5px; background: white; position: relative; width: auto; height: auto; }
+        div.toggler:hover { background: lightblue; }
+        #element.sights-pic { display: block; width: 90vw; height: auto; }
+        #element.sights-pic > img { width: 90vw; height: auto; }
+        #element.sights-desc { display: none;	}
+        #element.sights-map { display: none;	}
+      }
+      /* CSS for the Sights-Picture Div */
+      div.sights-pic { border-top: solid; border-bottom: solid; border-left: solid; border-width: 2px; }
+      div.sights-pic > img { border-right: solid; border-width: 2px; }
+      /* CSS for the Sights-Description Div */
+      div.sights-desc { position: absolute !important; width:40% !important; border-top: solid; border-bottom: solid; border-width: 2px; }
+      div.sights-desc > * { padding: 0px 10px 0px 10px; font-size: 18px; }
+      /* CSS for the Sights-Map Div */
+      div.sights-map { border: solid; border-width: 2px; }
+      table.google_map { border-collapse: collapse; min-height: 320px; width: 100%; height: auto; overflow: scroll; }
+      tr.map-info > * { padding: 0px 2px 0px 15px !important; vertical-align: top !important; border-top: solid; border-width: 1px; font-size: 18px !important; }
+      td > p, th > p { margin-top: 5px; }
+      #footer { margin: 0px 0px 0px 20%; height: 200px; width: 80%; border-top: solid; border-width: 1px; }
+      #footer > img { width: 79vw; height: 200px; }
+    </style>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header id="nav-header">Cuban Cities</header>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="#Havana">Havana</a></li>
+        <li><a class="nav-link" href="#Santiago_de_Cuba">Santiago de Cuba</a></li>
+        <li><a class="nav-link" href="#Trinidad">Trinidad</a></li>
+        <li><a class="nav-link" href="#Baracoa">Baracoa</a></li>
+        <li><a class="nav-link" href="#Camaguey">Camaguey</a></li>
+        <li class="nav-last"><a class="nav-link" href="#Reference">Reference</a></li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <h1>Cuban Cities</h1>
+      <section id="Havana" class="main-section">
+        <header>Havana</header>
+        <article>
+          <p>Havana is the largest city in, and also the capital of, Cuba. It bustles with foreigners and locals alike, and sprawls across a large area. Havana Vieja (Old Havana) is well worth the visit, however, as with many capital cities you should take care, as there are many people running scams to seperate you from your hard-earned money.</p>
+          <p>Rather surprisingly, accommodation is cheaper in (or at least near) Old Havana than it is further away from the centre, in the 'newer' parts of Havana (like Miramar or Vedado). You can find private rooms in casa particulares ranging anywhere from $15-$30 or you can find a hostel (look on the street 'San Rafael') where you find a bed in a dormitory for $12, with breakfast included. I haven't seen any hostels outside of Old Havana, and a private room elsewhere generally costs $25-$35.</p>
+          <p class="sights">Things to see:</p>
+          <ul>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle11');"><i><b>El Capitolio</b> -  The Capital</i>
+                <div id="toToggle11">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/capital.jpg" alt="Picture of El Capitolio" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>El Capitolio (The Capital):</h3>
+                    <p>El Capitolio is situated in Old Havana, and bears an striking similarity to the White House in Washington, USA.  This is because this building was based on the White House, before Cuba-US relations deteriorated.</p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.9588978735887!2d-82.36173108488914!3d23.13517758489618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88cd79b0f1ad23ed%3A0x9691e1e3252e3556!2sEl+Capitolio!5e0!3m2!1ses!2sau!4v1491951834786" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Paseo de Marti,</br>La Habana, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+            <div class="toggler" onclick="toggleText('toToggle12');"><i><b>Plaza de la Revolucion</b> -  Revolution Square</i>
+              <div id="toToggle12">
+                <div id="element" class="sights-pic">
+                  <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/plaza.jpg" alt="Picture of Plaza de la Revolucion" width="auto" height="330px" />
+                </div>
+                <div id="element" class="sights-desc">
+                  <h3>Plaza de la Revolucion (Revolution Square):</h3>
+                  <p>Plaza de la Revolucion, is a large square dedicated to the revolution and specifically Camilo Cienfuegos, Ernesto 'Che' Guerava and Jose Marti.</p>
+                </div>
+                <div id="element" class="sights-map">
+                  <table class="google_map">
+                    <tr>
+                      <td colspan="2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3669.26222233542!2d-82.38727612060154!3d23.124088611866494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x35035b742f567ab8!2sPlaza+de+la+Revoluci%C3%B3n!5e0!3m2!1ses!2sau!4v1491962449175" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                      </td>
+                    </tr>
+                    <tr class="map-info">
+                      <th><p>Direction:</p></th>
+                      <td><p>Plaza de la Revolucion,</br>La Habana, Cuba</p></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </li>
+          </ul>
+        </article>  
+      </section>
+      <section id="Santiago_de_Cuba" class="main-section">
+        <header>Santiago de Cuba</header>
+        <article>
+          <p>Santiago is a bustling city with an important history in Cuba and is generally considered the second most important city after Havana. There are parties in a few of the plazas every weekend, with music and dancing, which starts during the day and goes late into the night.</p>
+          <p>Away from the centre the landscape becomes very beautiful, and I would strongly recommend taking a trip away from the centre to see the hills and beaches in the surrounding countryside. The city itself is also quite hilly, which has the unfortunate effect of capturing the fumes emitted by the old American cars to create pockets of polluted air.</p>
+          <p>Santiago boasts an impressive port which brings with it a large influx of tourism - as large cruise liners dock there as they make their way across the Caribbean. Actually, the port areas boasts one of my favourite restaurants in Santiago, Puerto Del Rey (Port of the King), a brewery selling a mug of locally brewed beer for $1 and a half fillet of fish for $4.</p>
+          <p class="sights">Things to see:</p>
+          <ul>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle21');">
+                <i><b>Cementerio Santa Ifigenia</b> - Santa Ifigenia Cemetery</i>
+                <div id="toToggle21">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/cemetery.jpg" alt="Picture of El Capitolio" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>Cementerio Santa Ifigenia:</h3>
+                    <p>Cementerio Santa Ifigenia (Saint Ifigenia Cemetery) is where you can find the tombstones of Jose Marti & Fidel. As well as the changing of the guard (of Jose Marti's tomb)</p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3748.3428166301983!2d-75.84096098493968!3d20.036078586544367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ece5be333d8f1d9%3A0xc6c74a0f61b52055!2sCementerio+Santa+Ifigenia!5e0!3m2!1ses!2sau!4v1491966500809" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Santiago de Cuba, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle22');">
+                <i><b>Castillo de San Pedro de la Roca</b> - Castillo del Morro</i>
+                <div id="toToggle22">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/castle.jpg" alt="Picture of Plaza de la Revolucion" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>Castillo de San Pedro de la Roca:</h3>
+                    <p>Castillo de San Pedro de la Roca, or Castillo del Morro, is a fortress on the mouth of the river leading into the Santiago de Cuba Bay.</p>
+                    <p>This fortification was attacked a number of times during it's operation, but now serves as a museum detailing it's history.</p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3749.9519809715416!2d-75.87236918494075!3d19.968521586582195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ece5a93e5de24d3%3A0xb57b2a7f7587e3b2!2sCastillo+del+Morro!5e0!3m2!1ses!2sau!4v1491966853531" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Santiago de Cuba, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+            </div>
+          </li>
+          </ul>
+        </article> 
+      </section>
+      <section id="Trinidad" class="main-section">
+        <header>Trinidad</header>
+        <article>
+          <p>Trinidad is a small mecca of tourism in Santcus Santí.  The town itself is very beautiful with cobbled streets, but you will quickly find yourself with little to do if you stay there for more than a few days.</p>
+          <p>There is a very nice beach a short distance (30 minutes by bus) away, which I recommend visiting at least once during your stay.  There is a bus which leaves from the centre every few hours which will take you to the beach and back again for $5.  If you prefer the flexibility to go and come back when you want, there are also taxis which will take you, but be prepared to pay a little more.</p>
+          <p class="sights">Things to see:</p>
+          <ul>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle31');">
+                <i><b>Discoteca Las Cuevas</b> - Caves Disco</i>
+                <div id="toToggle31">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/cueva.jpg" alt="Picture of Caves Disco" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>Cementerio Santa Ifigenia:</h3>
+                    <p>Discoteca Las Cuevas (also called <i>Disco Ayala</i> and <i>La Cueva</i> is a nightclub inside a cave (yes, literally), which regularly fills up with Cubans and Foreigners alike.</p>
+                    <p>It is a short distance away from the centre, although not too far to walk to, or stumble home from, and worth the visit for the novelty alone.</p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3704.3390382390244!2d-79.98467879713394!3d21.80582763718868!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xd61690022fd79bc5!2sDiscoteca+Las+Cuevas!5e0!3m2!1ses!2sau!4v1491967982129" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Trinidad, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle32');">
+                <i><b>Trek on horseback to the waterfalls</b></i>
+                <div id="toToggle32">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/horseback.jpg" alt="Picture of Horseback Trekking" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>Trek on horseback to the waterfalls:</h3>
+                    <p>Unfortunately I never did this, so cannot advise you on it further. Except, to say that I saw pictures and it looked lovely.</p>
+                    <p>Prices range from $20-$25 and there are other options to get to the waterfalls if you do not want to ride on horseback.<p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7408.900836144065!2d-79.98448156726062!3d21.801521358235124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1493952920196" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Trinidad, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article>    
+      </section>
+      <section id="Baracoa" class="main-section">
+        <header>Baracoa</header>
+        <article>
+          <p>At first thought, Baracoa is a small but surprisingly touristic city, given it's distance from the capital.  However, it is not really that surprising when you consider it's proximity to the port city of Santiago de Cuba and the beautiful landscape that surrounds it.</p>
+          <p>Baracoa is Cuba's oldest city, well - it was the first village founded by C. Columbus - as even now calling it a city would be a bit of a push, given it's small geographical size and population.  The area surrounding Baracoa produces coffee and cocoa.</p>
+          <p class="sights">Things to see:</p>
+          <ul>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle41');">
+                <i><b>Yumuri</b> - Shear cliffs by the river and sea.</i>
+                <div id="toToggle41">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/yumuri.jpg" alt="Picture a shallow river with clear blue water, nestled between two shear cliff faces winding its way our to the sea" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>Cementerio Santa Ifigenia:</h3>
+                    <p>Story has it, that the name was given to the place because that was the cry let out by the indigenous people as the invading Spanish pushed them off the top of the cliff.</p>
+                    <p>Yumuri can be reached by a local bus, for a few pesos, which you can take from the Omnibus Terminal (Municipal) near the city centre.  There are rowboats which will take you a small ways up the river at a price of $2 (foreigners), or 10 pesos (Cubans).</p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1870.9858181709185!2d-74.29858113617426!3d20.30144112748434!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sau!4v1493954997127" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Guantanamo, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="toggler" onclick="toggleText('toToggle42');">
+                <i><b>El Yunque</b> - A mountainous rock</i>
+                <div id="toToggle42">
+                  <div id="element" class="sights-pic">
+                    <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/yunque.jpg" alt="Picture of El Yunque" width="auto" height="330px" />
+                  </div>
+                  <div id="element" class="sights-desc">
+                    <h3>El Yunque:</h3>
+                    <p>A days hike from Baracoa. Be prepared - have a guide and bring food and water.</p>
+                  </div>
+                  <div id="element" class="sights-map">
+                    <table class="google_map">
+                      <tr>
+                        <td colspan="2">
+                          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29926.10676943847!2d-74.55404521766512!3d20.351389709385256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8ec96061c115a56b%3A0x3886c93725f642d7!2sEl+Yunque!5e0!3m2!1sen!2sau!4v1494023662130" width="100%" height="250px" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        </td>
+                      </tr>
+                      <tr class="map-info">
+                        <th><p>Direction:</p></th>
+                        <td><p>Baracoa, Cuba</p></td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </article> 
+      </section>
+      <section id="Camaguey" class="main-section">
+        <header>Camaguey</header>
+        <article>
+          <p>Camaguey is a easy going city, it has been around for just over 500 years, and is famous for making '<i>tinajones</i>' (a tinajon is a large ceramic vase used to store water).  Every year the people of Camaguey hold a festival called '<i>fiesta del tinajon</i>' (party of the tinajon), but despite the name, it doesn't have too much to do with the vases.  Mainly it is an opportunity for the people to showcase traditional dance and music as well as having stalls which sell things for the house as well as clothes, food and drink. It gives locals a reason to drink, dance and generally enjoy themselves.</p>
+          <p>Camaguey is quite large in size and boasts a number of plazas and churches in the central area, despite this, the center is still easily navigated by foot.  There is not a large number of things to do in Camaguey, once you have familiarised yourself with the centre and the surrounds. However I would advise you to check out the following: Calle Republica (Republica Street - where there are a lot of stores as well as a gym and a hotel), Plaza de la Revolution Ignacio Agramonte (Revolution Square - with statues of famous Cubans), Casa de la Trova (Trova House - a bar that plays traditional music late in to the night), and Plaza del Carmen (Carmen's Square).</p>
+        </article>
+      </section>    
+      <section id="Reference" class="main-section">
+        <header>Reference</header>
+        <article>
+          <p>Some of the HTML tags I have used in this website is included: <code>nav</code> tags, <code>section</code> tags, <code>header</code> tags, <code>iframe</code> tags, and <code>footer</code> tags.</p>
+        </article>
+      </section>       
+    </main>
+    <div id="footer">
+      <img src="https://www.rtgphotography.com.au/img/codepen/fcc-proj-04/footer.jpg" alt="Footer" />
+    </div>
+    <script type="text/javascript">
+      function toggleText(id) {
+        var theText = document.getElementById(id);
+        (theText.style.display=='block') ? theText.style.display='none' : theText.style.display='block';
+      }
+    </script>
+  </body>
+</html>
