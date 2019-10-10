@@ -1,0 +1,127 @@
+<!-- This document was coded by sgedye in completion of the fifth and final project in FreeCodeCamp's 300hr Responsive Web Design course -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <style>
+      body { margin: 0px; padding: 0px; font-size: 22px; }
+      section { padding-top: 60px; }
+      h1 { margin: 0px; text-align: center; font-size: 3em; text-shadow: -2px 2px #fff; }
+      h2 { margin: 0px; text-align: center; font-size: 2em; text-shadow: -1px 1px #fff; }
+      h3 { margin: 0px; font-size: 1.2em; }
+      a.nav-link { color: #000; padding-left: 2px; padding-right: 2px; }
+      p { margin: 0px; }
+      .wrapper { width: 90%; margin: auto; }
+
+      #navbar { position:fixed; width: 90%; padding: auto; line-height: 60px; z-index: 99; }
+      ul.nav-list { position: absolute; width: 100%; background-color: grey; list-style-type: none; display: flex; justify-content: space-around; align-items: stretch; margin: 0px; padding: 0px; }
+      li.nav-item { padding: 0px 1% 0px 1%; }
+      a.nav-link { text-decoration: none; font-size: 1em; }
+      a.nav-link:hover { color: red;}
+
+      /* Welcome Section */
+      #welcome-section { height: calc(100vh - 60px); }
+      img.hero-img { position: static; width: 100%; height: stretch; padding: 0px; z-index: -1; }
+      div.outer { position: absolute; display: table; height: 100vh; }
+      div.middle { display: table-cell; vertical-align: middle; width: 90vw; }
+      div.header { margin: auto; }
+      div.header > h1 {  }
+      /* Mobile Header*/
+      @media screen and (max-width: 600px) {
+        div.middle { vertical-align: top; }
+        div.header > h1 { padding-top: 70px; font-size: 40px; text-shadow: -1px 1px #fff; }
+        div.header > hr { display: none; }
+        div.header > h2 { display: none; }
+      }
+
+      /* Projects Section */
+      #projects > h2 {padding-bottom: 50px; }
+      div.card-deck { width: 100%; height: auto; flex-direction: column; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: stretch; }
+      div.project-tile { height: auto; background-color: #fff; padding: 20px; border: solid; border-width: 2px; }
+      div.project-tile > img { width: 100%; border: solid; border-width: 1px; }
+      div.project-tile > a { text-decoration: none; color: #000; }
+
+      /* Contact Section */
+      #contact { height: 300px; }
+      #contact > h2 { padding-bottom: 50px; }
+      ul.list-group { width: 50%; list-style-type: none; display: flex; justify-content: space-around; align-items: stretch; margin: auto; padding: 0px; }
+      i.footer-icon { font-size: 2em; }
+
+      /* Query for Desktop */
+      @media screen and (min-width: 600px) {
+        ul.nav-list { justify-content: flex-end !important; }
+        a.nav-link { font-size: 1.6em; }
+        /* Desktop - Projects */ 
+        #projects { background-color: lightgray; }
+        div.card-deck { flex-direction: row; width: 90vw; }
+        div.project-tile { width: 40%; }
+        /* Desktop - Contact Section */
+        #contact { background-color: lightgray; }
+        i.footer-icon { font-size: 3em; -webkit-transition: width 0.5s, height 0.5s, -webkit-transform 0.5s; transition: width 0.5s, height 0.5s, transform 0.5s; }
+        i.footer-icon:hover { color: red; -webkit-transform: scale(1.5); transform: transform: scale(1.5); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav id="navbar">
+        <ul class="nav-list">
+          <li class="nav-item"><a class="nav-link" href="#welcome-section">Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section id="welcome-section"> 
+        <div class="outer">
+          <div class="middle">
+            <div class="header">
+              <h1>Shaun Gedye</h1>
+              <hr>
+              <h2>Software Engineer & Web Developer</h2>
+            </div>
+          </div>
+        </div>
+        <img class="hero-img" src="https://sgedye.github.io/src/assets/hero/hero-image.jpg" alt="Background Image" />
+      </section>
+      <section id="projects">
+        <h2>PROJECTS</h2>
+        <div class="card-deck">
+          <div class="project-tile">
+            <img src="https://sgedye.github.io/src/assets/rtgphotography/home01.png" class="card-img-top" alt="RTG Photography Image" />
+            <a href="https://www.rtgphotography.com.au" target="_blank" rel="noopener noreferrer">
+              <h3 class="card-title">RTG Photography</h3>
+            </a>
+            <p class="card-text">This website was designed and built by Shaun Gedye; using PHP, UI Kit, HTML, CSS, Abode Photoshop, Sublime Text, cPanel, Asana and Google Analytics.</p>
+          </div>
+          <div class="project-tile">
+            <img src="https://sgedye.github.io/src/assets/cuba/home.png" class="card-img-top" alt="Cuba Image" />
+            <h3 class="card-title">Cuba</h3>
+            <p class="card-text">This website was designed and built by Shaun Gedye in 2017; using JavaScript, HTML, CSS and TextWrangler.</p>
+          </div>
+        </div>
+      </section>
+      <section id="contact">
+        <h2>Find me on:</h2>
+        <ul class="list-group">
+          <li class="list-group-item">
+            <a id="profile-link" href="https://www.github.com/sgedye" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-github footer-icon"></i>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a id="profile-link-2" href="https://www.freecodecamp.org/sgedye" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-free-code-camp footer-icon"></i>
+            </a>
+          </li>
+          <li class="list-group-item">
+            <a id="profile-link-3" href="https://codepen.io/sgedye" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-codepen footer-icon"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
