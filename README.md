@@ -13,6 +13,6 @@ A repository for the Free Code Camp Projects I have completed.
 
 <hr>
 
-<b>project-06.html</b> is a <b>Palindrome Checker</b> created to fullfil the requirements of the first project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
+<b>project-06.js</b> is a <b>Palindrome Checker</b> created to fullfil the requirements of the first project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
-<b>project-07.html</b> is a <b>Personal Portfolio Webpage</b> created to fullfil the requirements of the second project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
+<b>project-07.js</b> is a <b>Personal Portfolio Webpage</b> created to fullfil the requirements of the second project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
