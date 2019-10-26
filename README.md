@@ -15,7 +15,7 @@ A repository for the Free Code Camp Projects I have completed.
 
 <b>project-06.js</b> is a <b>Palindrome Checker</b> created to fullfil the requirements of the first project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
-<b>project-07.js</b> is a <b>Personal Portfolio Webpage</b> created to fullfil the requirements of the second project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
+<b>project-07.js</b> is a <b>Roman Numeral Converter</b> created to fullfil the requirements of the second project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
 <b>project-08.js</b> is a <b>Caesar Cipher</b> created to fullfil the requirements of the third project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
