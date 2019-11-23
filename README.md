@@ -20,3 +20,8 @@ A repository for the Free Code Camp Projects I have completed.
 <b>project-08.js</b> is a <b>Caesar Cipher</b> created to fullfil the requirements of the third project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
 <b>project-09.js</b> is a <b>Telephone Number Validator</b> created to fullfil the requirements of the fourth project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
+
+<b>project-10.js</b> is a <b>Cash Register</b> created to fullfil the requirements of the fifth project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
+
+<hr>
+
