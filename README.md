@@ -3,7 +3,7 @@ A repository for the Free Code Camp Projects I have completed.
 
 <hr>
 
-<strong>Responsive Web Design:</strong>
+<h2>Responsive Web Design:</h2>
 
 <b>project-01.html</b> is a <b>Tribute Page</b> created to fullfil the requirements of the first project in the "<i>Responsive Web Design Certification</i>" course available at http://www.freecodecamp.org
 
@@ -17,7 +17,7 @@ A repository for the Free Code Camp Projects I have completed.
 
 <hr>
 
-<b>JavaScript Algorithms and Data Structures:</b>
+<h3>JavaScript Algorithms and Data Structures:</h3>
 
 <b>project-06.js</b> is a <b>Palindrome Checker</b> created to fullfil the requirements of the first project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
