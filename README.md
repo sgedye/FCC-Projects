@@ -17,7 +17,7 @@ A repository for the Free Code Camp Projects I have completed.
 
 <hr>
 
-<h3>JavaScript Algorithms and Data Structures:</h3>
+<h2>JavaScript Algorithms and Data Structures:</h2>
 
 <b>project-06.js</b> is a <b>Palindrome Checker</b> created to fullfil the requirements of the first project in the "<i>JavaScript Algorithms and Data Structures Certification</i>" course available at http://www.freecodecamp.org
 
